@@ -1,0 +1,216 @@
+
+Implimenting Stack using Array
+
+code
+
+ 
+#include <stdio.h>
+
+#include <math.h>
+
+int stack[50],choice,n,top,x,i;
+
+void push(void);
+
+void pop(void);
+
+void display(void);
+
+int main() 
+
+{
+ 
+	top=-1;
+   
+	printf("\nEnter the size of stack[MAX=50]");
+    
+	scanf("%d",&n);
+    
+	printf("\n\t Stack Using Array ");
+    
+	printf("\n\t1.Push \n\t2.Pop \n\t3.Display \n\t4.Exit");
+
+    do
+  {
+ 
+	       printf("\nEnter your choice!");
+	
+        scanf("%d",&choice);
+
+	        switch(choice)
+       
+		 {
+            
+			case 1:
+           
+			 {
+  
+				push();
+                
+				break;
+            
+			 
+			 }
+            
+			case 2:
+            
+			 {
+                
+				pop();
+               
+				break;
+            
+			 }
+            
+			case 3:
+            
+			 {
+                
+				display();
+               
+				break;
+            
+			 }
+            
+   			case 4:
+           
+			{
+                
+				printf("\nExit");
+               
+				break;
+            
+			}
+            	
+			default:
+            
+			{
+               
+				printf("\n\tInvalid choice");
+                
+           
+			}
+        
+		}
+    
+	}
+    
+     while(choice<=4);
+    
+     return 0;
+
+}
+
+void push()
+
+{
+    
+if (top>=n-1)
+   
+{
+       
+	printf("\n Stack is overflow");
+
+}
+    
+else
+    
+{
+        
+	printf("\nEnter the item to push");
+
+        scanf("%d",&x);
+        
+	top++;
+        
+	stack[top]=x;
+    
+}
+
+}
+
+void pop()
+
+{
+    
+if(top<=-1)
+    
+{
+        
+	printf("\nStack underflow");
+    
+}
+    
+else
+    
+{
+        
+	printf("\n Popped element is %d",stack[top]);
+        
+	top--;
+        
+    
+}
+
+}
+
+void display()
+
+{
+    
+	if(top>=0)
+
+{
+    	
+	printf("\nElements in stack");
+    
+	for(i=top;i>=0;i--)
+    
+	printf("\n%d",stack[i]);
+    	
+	printf("\n Enter next choice");
+
+}
+
+else
+
+{
+    
+	printf("\nStack is empty");
+    
+}
+
+}
+
+
+
+
+OUTPUT
+
+
+Enter the size of stack[MAX=50]5
+Stack Using Array 
+	1.Push 
+	2.Pop 
+	3.Display 
+	4.Exit
+Enter your choice!1
+Enter the item to push3
+
+Enter your choice!1
+Enter the item to push5
+
+Enter your choice!3
+Elements in stack
+5
+3
+Enter your choice!2
+ Popped element is 5
+Enter your choice!3
+Elements in stack
+3
+ Enter next choice
+Enter your choice!4
+
+Exit
+Enter your choice!
