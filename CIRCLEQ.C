@@ -8,6 +8,8 @@ void display();
 void main()
 {
 int choice;
+ front=rear=-1;
+ clrscr();
  printf("\nEnter the size of array");
  scanf("%d",&max);
  printf("\nCircular Queue using array\n");
